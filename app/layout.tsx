@@ -32,75 +32,76 @@ export default function RootLayout({
     <html lang="en">
       <Script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js" />
       <body>
-        <Box sx={{ flexGrow: 1, marginBottom: 10 }}>
-          <AppBar position="fixed" style={{ boxShadow: "none", background: "white" }}>
-            <Toolbar sx={{
-              flexGrow: 1, justifyContent: {
-                xl: "center",
-                lg: "center",
-                md: "center",
-                sm: "space-between",
-                xs: "space-between",
-              }
-            }}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 2 }}
-              >
-                <Image
-                  // className={styles.logo}
-                  src="/logo.png"
-                  alt="Next.js Logo"
-                  width={80}
-                  height={80}
-                  priority
-                />
-              </IconButton>
+        <Suspense fallback={<Loading />} >
+          <Box sx={{ flexGrow: 1, marginBottom: 10 }}>
+            <AppBar position="fixed" style={{ boxShadow: "none", background: "white" }}>
+              <Toolbar sx={{
+                flexGrow: 1, justifyContent: {
+                  xl: "center",
+                  lg: "center",
+                  md: "center",
+                  sm: "space-between",
+                  xs: "space-between",
+                }
+              }}>
+                <IconButton
+                  size="large"
+                  edge="start"
+                  color="inherit"
+                  aria-label="menu"
+                  sx={{ mr: 2 }}
+                >
+                  <Image
+                    // className={styles.logo}
+                    src="/logo.png"
+                    alt="Next.js Logo"
+                    width={80}
+                    height={80}
+                    priority
+                  />
+                </IconButton>
 
-              <Box display={{
-                xl: "none",
-                lg: "none",
-                md: "none",
-                sm: "block",
-                xs: "block"
-              }}>
-                <Button onClick={() => { setState(true) }} color="inherit"><MenuIcon sx={{ color: "#00B27F", fontSize: 30, }} /></Button>
-              </Box>
-              <Box display={{
-                xl: "block",
-                lg: "block",
-                md: "block",
-                sm: "none",
-                xs: "none"
-              }}>
+                <Box display={{
+                  xl: "none",
+                  lg: "none",
+                  md: "none",
+                  sm: "block",
+                  xs: "block"
+                }}>
+                  <Button onClick={() => { setState(true) }} color="inherit"><MenuIcon sx={{ color: "#00B27F", fontSize: 30, }} /></Button>
+                </Box>
+                <Box display={{
+                  xl: "block",
+                  lg: "block",
+                  md: "block",
+                  sm: "none",
+                  xs: "none"
+                }}>
+                  <Button color="inherit"> <Link className='link' href="#decouvrir">Nous decouvrir</Link></Button>
+                  <Button color="inherit"> <Link className='link' href="#rapports">Nos Rapport</Link></Button>
+                  <Button color="inherit"><Link className='link' href="#ressources_et_informations">Ressources et Informations</Link></Button>
+                  <Button color="inherit"><Link className='link' href="#nos_partenaires">Soutien et Engagement</Link></Button>
+                  <Button color="inherit"><Link className='link' href="#contact">Contact</Link></Button>
+                </Box>
+              </Toolbar>
+            </AppBar>
+          </Box>
+          <Drawer
+            anchor={"left"}
+            open={state}
+            onClose={() => { setState(false) }}
+          >
+            <Box sx={{ width: 250 }}>
+              <Box sx={{ display: "flex", flexDirection: "column" }}>
                 <Button color="inherit"> <Link className='link' href="#decouvrir">Nous decouvrir</Link></Button>
                 <Button color="inherit"> <Link className='link' href="#rapports">Nos Rapport</Link></Button>
                 <Button color="inherit"><Link className='link' href="#ressources_et_informations">Ressources et Informations</Link></Button>
                 <Button color="inherit"><Link className='link' href="#nos_partenaires">Soutien et Engagement</Link></Button>
                 <Button color="inherit"><Link className='link' href="#contact">Contact</Link></Button>
               </Box>
-            </Toolbar>
-          </AppBar>
-        </Box>
-        <Drawer
-          anchor={"left"}
-          open={state}
-          onClose={() => { setState(false) }}
-        >
-          <Box sx={{ width: 250 }}>
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <Button color="inherit"> <Link className='link' href="#decouvrir">Nous decouvrir</Link></Button>
-              <Button color="inherit"> <Link className='link' href="#rapports">Nos Rapport</Link></Button>
-              <Button color="inherit"><Link className='link' href="#ressources_et_informations">Ressources et Informations</Link></Button>
-              <Button color="inherit"><Link className='link' href="#nos_partenaires">Soutien et Engagement</Link></Button>
-              <Button color="inherit"><Link className='link' href="#contact">Contact</Link></Button>
             </Box>
-          </Box>
-        </Drawer>
-        <Suspense fallback={<Loading />} >
+          </Drawer>
+
           {children}
         </Suspense>
         {/* <Box sx={{ position: "fixed", bottom: 0,  }}>footer</Box> */}
