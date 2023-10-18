@@ -37,7 +37,7 @@ export default function RootLayout({
   }, [])
   return (
     <html lang="en">
-      {/* <Script src="/swiper-element-bundle.min.js" /> */}
+      <Script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js" />
       <body>
         {loading === true && (<Loading />)}
         {loading === false && (
