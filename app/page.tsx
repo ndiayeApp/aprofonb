@@ -246,7 +246,7 @@ export default function Home() {
               background: "white", display: "flex", justifyContent: "center", marginTop: 2,
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;", flexDirection: 'column'
             }}>
-              <Typography component="p" sx={{ color: "gray", alignSelf: "center", marginTop: 2 }}>
+              <Typography component="p" sx={{ color: "gray", alignSelf: "center", marginTop: 2, marginLeft: { sx: 5, xs: 5, lg: 0, xl: 0, md: 0 } }}>
                 De façon spécifique, les objectifs assignés à l’ONG sont :
               </Typography>
               <List dense={true}>
@@ -304,14 +304,14 @@ export default function Home() {
           </Grid>
           <Grid item xl={5} xs={12} lg={5} md={5} sm={12} >
             <Box sx={{ background: "white", display: "flex", justifyContent: "center", borderRadius: 2, boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;" }}>
-              <Typography component="h5" variant="h5" sx={{ color: "#00B27F" }}>Objectifs assignés</Typography>
+              <Typography component="h5" variant="h5" sx={{ color: "#00B27F" }}>Domaines d’intervention</Typography>
             </Box>
             <Box sx={{
               background: "#00B27F", display: "flex", justifyContent: "center", marginTop: 2,
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;", flexDirection: 'column'
             }}>
-              <Typography component="p" sx={{ color: "white", alignSelf: "center", marginTop: 2 }}>
-                De façon spécifique, les objectifs assignés à l’ONG sont :
+              <Typography component="p" sx={{ color: "white", alignSelf: "center", marginTop: 2, marginLeft: { sx: 5, xs: 5, lg: 0, xl: 0, md: 0 } }}>
+                Ses principaux domaines d’intervention sont les suivants :
               </Typography>
               <List dense={true}>
                 <ListItem>
@@ -319,7 +319,7 @@ export default function Home() {
                     <DoneIcon sx={{ color: "white" }} />
                   </ListItemIcon>
                   <ListItemText sx={{ color: "white" }}
-                    primary="La pérennisation des acquis des projets et institutions œuvrant dans le sens du développement forestier au Bénin ;"
+                    primary="Inventaire et aménagement participatif forestier des ressources naturelles ;"
                   />
                 </ListItem>
               </List>
@@ -330,8 +330,7 @@ export default function Home() {
                   </ListItemIcon>
                   <ListItemText
                     sx={{ color: "white" }}
-                    primary="L’appui à la décentralisation à travers la conception, la rédaction de micro-projets 
-                    bancables dans le domaine de la gestion des ressources naturelles et de la protection de l’environnement ;"
+                    primary="Protection de l’environnement et des ressources naturelles ;"
                   />
                 </ListItem>
               </List>
@@ -342,7 +341,7 @@ export default function Home() {
                   </ListItemIcon>
                   <ListItemText
                     sx={{ color: "white" }}
-                    primary="La recherche de financement pour la réalisation des projets ;"
+                    primary="Reboisement et enrichissement de peuplements forestiers et des écosystèmes dégradés"
                   />
                 </ListItem>
               </List>
@@ -353,7 +352,7 @@ export default function Home() {
                   </ListItemIcon>
                   <ListItemText
                     sx={{ color: "white" }}
-                    primary="La formation des riverains à la gestion rationnelle des ressources naturelles ;"
+                    primary="Suivi et entretien de plantations"
                   />
                 </ListItem>
               </List>
@@ -364,7 +363,29 @@ export default function Home() {
                   </ListItemIcon>
                   <ListItemText
                     sx={{ color: "white" }}
-                    primary="Le développement de l’esprit d’initiative à la base."
+                    primary="Planification décentralisée et aménagement du territoire ;"
+                  />
+                </ListItem>
+              </List>
+              <List dense={true}>
+                <ListItem>
+                  <ListItemIcon>
+                    <DoneIcon sx={{ color: "white" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    sx={{ color: "white" }}
+                    primary="Formation ;"
+                  />
+                </ListItem>
+              </List>
+              <List dense={true}>
+                <ListItem>
+                  <ListItemIcon>
+                    <DoneIcon sx={{ color: "white" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    sx={{ color: "white" }}
+                    primary="Développement local."
                   />
                 </ListItem>
               </List>
@@ -377,7 +398,7 @@ export default function Home() {
             flexGrow: 1,
             marginTop: 5,
             color: '#00B27F',
-            marginLeft: 20
+            marginLeft: { sx: 0, xs: 0, xl: 20, lg: 20, md: 20 }
           }} variant="h4" component="h4">
             Nos rapports
           </Typography>
@@ -513,7 +534,7 @@ export default function Home() {
         </Box>
       </Box>
       <Box id="ressources_et_informations" sx={{ flexGrow: 1, background: "#00B27F", display: "flex", justifyContent: "center", height: 150, alignItems: "center", marginTop: 5 }}>
-        <Typography className={inter.className} sx={{ display: "flex", flexGrow: 1, justifyContent: "center", color: 'white', }} variant="h4" component="h4">
+        <Typography className={inter.className} sx={{ display: "flex", flexGrow: 1, justifyContent: "center", color: 'white', marginLeft: { xs:3} }} variant="h4" component="h4">
           Ressources et Informations
         </Typography>
       </Box>
@@ -521,7 +542,7 @@ export default function Home() {
         delay: 5000,
         disableOnInteraction: false,
       }} loop={true}
-        style={{ height: "100%", width: "100%", }}
+        style={{ height: "100%", width: "100%",   }}
         pagination={pagination}
         modules={[Pagination]}
         centeredSlides={true}
@@ -529,8 +550,9 @@ export default function Home() {
         <SwiperSlide>
           <Box sx={{
             display: "flex",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
-            borderRadius: 3, marginBottom: 10, margin: { xs: "20px 5% 0 5%", sm: "20px 5% 0 5%", md: "20px 5% 0 5%", lg: "20px 15% 0 15%", xl: "20px 15% 0 15%", }
+            // boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+            borderRadius: 3, marginBottom: 10, margin: { xs: "20px 5% 0 5%", sm: "20px 5% 0 5%", md: "20px 5% 0 5%", lg: "20px 15% 0 15%", xl: "20px 15% 0 15%", },
+            
           }}>
             <Grid container spacing={{ xs: 2, sm: 0, md: 0, lg: 0, xl: 0 }} sx={{ height: { xs: 600, sm: 600, md: 400, lg: 400, xl: 400, } }}  >
               <Grid xl={5} item xs={12} lg={5} md={5} sm={12} sx={{ height: { xs: 300, sm: 300, md: "100%", lg: "100%", xl: "100%", } }} >
@@ -702,7 +724,7 @@ export default function Home() {
         <SwiperSlide>
           <Box sx={{
             display: "flex",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+            // boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
             borderRadius: 3, marginBottom: 10, margin: { xs: "20px 5% 0 5%", sm: "20px 5% 0 5%", md: "20px 5% 0 5%", lg: "20px 15% 0 15%", xl: "20px 15% 0 15%", }
           }}>
             <Grid container spacing={{ xs: 2, sm: 0, md: 0, lg: 0, xl: 0 }} sx={{ height: { xs: 600, sm: 600, md: 400, lg: 400, xl: 400, } }}  >
@@ -842,7 +864,7 @@ export default function Home() {
         <SwiperSlide>
           <Box sx={{
             display: "flex",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+            // boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
             borderRadius: 3, marginBottom: 10, margin: { xs: "20px 5% 0 5%", sm: "20px 5% 0 5%", md: "20px 5% 0 5%", lg: "20px 15% 0 15%", xl: "20px 15% 0 15%", }
           }}>
             <Grid container spacing={{ xs: 2, sm: 0, md: 0, lg: 0, xl: 0 }} sx={{ height: { xs: "auto", sm: "auto", md: 400, lg: 400, xl: 400, } }}  >
@@ -866,7 +888,7 @@ export default function Home() {
         <SwiperSlide>
           <Box sx={{
             display: "flex",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+            // boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
             borderRadius: 3, marginBottom: 10, margin: { xs: "20px 5% 0 5%", sm: "20px 5% 0 5%", md: "20px 5% 0 5%", lg: "20px 15% 0 15%", xl: "20px 15% 0 15%", }
           }}>
             <Grid container spacing={{ xs: 2, sm: 0, md: 0, lg: 0, xl: 0 }} sx={{ height: { xs: "auto", sm: "auto", md: 400, lg: 400, xl: 400, } }}  >
@@ -890,7 +912,7 @@ export default function Home() {
         <SwiperSlide>
           <Box sx={{
             display: "flex",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+            // boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
             borderRadius: 3, marginBottom: 10, margin: { xs: "20px 5% 0 5%", sm: "20px 5% 0 5%", md: "20px 5% 0 5%", lg: "20px 15% 0 15%", xl: "20px 15% 0 15%", }
           }}>
             <Grid container spacing={{ xs: 2, sm: 0, md: 0, lg: 0, xl: 0 }} sx={{ height: { xs: "auto", sm: "auto", md: 400, lg: 400, xl: 400, } }}  >
@@ -955,7 +977,7 @@ export default function Home() {
           </Box>
         </Grid>
       </Grid>
-      <Box id="contact"  sx={{ flexGrow: 1, marginTop: 5, marginBottom: 10, }}>
+      <Box id="contact" sx={{ flexGrow: 1, marginTop: 5, marginBottom: 10, }}>
         <Typography className={inter.className} sx={{
           display: "flex",
           flexGrow: 1,
@@ -970,7 +992,8 @@ export default function Home() {
           flexGrow: 1,
           alignSelf: "center",
           justifyContent: "center",
-          marginTop: 2
+          marginTop: 2,
+          marginLeft: { xs: 3, sx: 2 }
         }} >
           <Box>
             <Typography style={{ marginTop: 1 }} className={inter.className} component="p">
