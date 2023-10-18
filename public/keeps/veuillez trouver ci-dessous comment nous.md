@@ -29,7 +29,7 @@ REFERENCES TECHNIQUES DE L’ONG 200 2005
 Déclaration du présent
 
 3. Ressources et Informations :
-Différentes forêts de photos
+<!-- Différentes forêts de photos -->
 Zone géographique d'action
 Processus de recrutement
 

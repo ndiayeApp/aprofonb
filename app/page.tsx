@@ -523,7 +523,7 @@ export default function Home() {
       }} loop={true}
         style={{ height: "100%", width: "100%", }}
         pagination={pagination}
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination]}
         centeredSlides={true}
         className="mySwiper">
         <SwiperSlide>
