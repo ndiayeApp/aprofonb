@@ -101,7 +101,7 @@ export default function RootLayout({
           </Box>
         </Drawer>
         <Suspense fallback={<Loading />} >
-          {children}
+          {/* {children} */}
         </Suspense>
         {/* <Box sx={{ position: "fixed", bottom: 0,  }}>footer</Box> */}
       </body>
